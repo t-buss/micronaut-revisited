@@ -1,0 +1,18 @@
+version: "3"
+services:
+  recipe_db:
+    build:
+      context: .
+      dockerfile: db.Dockerfile
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
+  recipe_app:
+    image: recipes-micronaut:latest
+    ports:
+      - 8080:8080
+    depends_on:
+      - recipe_db
+    environment:
+      JDBC_URL: "jdbc:postgresql://recipe_db:5432/postgres"

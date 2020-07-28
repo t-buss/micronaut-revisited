@@ -1,0 +1,16 @@
+{
+	"name": "Pizza",
+	"description": "Best thing about Italy",
+	"ingredients": [
+		{
+			"name": "Tomatoes",
+			"unit": "GRAM",
+			"amount": 200
+		},
+		{
+			"name": "Cheese",
+			"unit": "GRAM",
+			"amount": 1000
+		}
+	]
+}

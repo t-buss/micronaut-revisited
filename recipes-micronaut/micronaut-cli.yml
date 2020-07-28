@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: de.tbuss.recipesmicronaut
+testFramework: junit
+sourceLanguage: java
+buildTool: gradle
+features: [annotation-api, app-name, data, data-jdbc, docker, file-watch, graalvm, gradle, http-client, java, java-application, jdbc-hikari, junit, logback, netty-server, postgres, readme, shade, testcontainers, yaml]

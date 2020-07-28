@@ -1,0 +1,11 @@
+micronaut:
+  application:
+    name: recipesMicronaut
+datasources:
+  default:
+    url: ${JDBC_URL:`jdbc:postgresql://localhost:5432/postgres`}
+    driverClassName: ${JDBC_DRIVER:org.postgresql.Driver}
+    username: ${JDBC_USER:postgres}
+    password: ${JDBC_PASSWORD:''}
+    schema-generate: CREATE_DROP
+    dialect: POSTGRES
