@@ -18,7 +18,7 @@ public class ShoppingListService {
     }
 
     public List<ShoppingListItem> getShoppingList() {
-        return this.shoppingListRepository.findAll();
+        return (List<ShoppingListItem>)this.shoppingListRepository.findAll();
     }
 
     public List<ShoppingListItem> addIngredientsFromRecipe(UUID recipeId) {
@@ -35,7 +35,7 @@ public class ShoppingListService {
                     })
                     .collect(Collectors.toList());
 
-            return this.shoppingListRepository.saveAll(shoppingListItems);
+            return (List<ShoppingListItem>)this.shoppingListRepository.saveAll(shoppingListItems);
         }
         return Collections.emptyList();
     }
